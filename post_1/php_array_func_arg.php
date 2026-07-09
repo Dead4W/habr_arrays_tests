@@ -2,10 +2,6 @@
 ini_set('memory_limit', '4096M');
 
 function elapsedDebug(\Closure $fn) {
-    if (function_exists('memory_reset_peak_usage')) {
-        memory_reset_peak_usage();
-    }
-
     $start = microtime(true);
     $fn();
     $durationMs = (microtime(true) - $start) * 1000;
