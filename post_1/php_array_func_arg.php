@@ -36,7 +36,7 @@ for ($i = 0; $i <= $length; $i++) {
 
 // array size = 10 000 000
 // Наша хорошая функция
-function goodFunc(&$arr) {
+function goodFunc($arr) {
     // Мы добавили костыль, конкретно в этом месте, мы добавляем какое-то число, но оно не должно попасть в вверх
     $someVirtualPayload = 123;
     $arr[] = $someVirtualPayload;

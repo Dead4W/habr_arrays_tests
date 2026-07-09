@@ -35,10 +35,8 @@ for ($i = 0; $i <= $length; $i++) {
 }
 
 elapsedDebug(function () use (&$arr, $length) {
-    // ИЛИ Вставляем элемент, который порождает разрыв между ключами
+    // Вставляем элемент, который порождает разрыв между ключами
     $arr[$length*10] = $length*10;
-});
-elapsedDebug(function () use (&$arr, $length) {
     // ИЛИ Вставляем элемент со строковым ключом
     $arr['test_string'] = $length*10;
 });
