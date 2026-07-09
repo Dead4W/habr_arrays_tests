@@ -1,0 +1,79 @@
+services:
+  php56:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:5.6-cli
+        XDEBUG_PECL_PACKAGE: xdebug-2.5.5
+    container_name: php56_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
+
+  php72:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:7.2-cli
+        XDEBUG_PECL_PACKAGE: xdebug-3.1.6
+    container_name: php72_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
+
+  php81:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:8.1-cli
+    container_name: php81_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
+
+  php82:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:8.2-cli
+    container_name: php82_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
+
+  php83:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:8.3-cli
+    container_name: php83_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
+
+  php84:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:8.4-cli
+    container_name: php84_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
+
+  php85:
+    build:
+      context: .
+      dockerfile: docker/php-with-xdebug.Dockerfile
+      args:
+        BASE_IMAGE: php:8.5-rc-cli
+    container_name: php85_test_runner
+    working_dir: /work
+    volumes:
+      - ./:/work
