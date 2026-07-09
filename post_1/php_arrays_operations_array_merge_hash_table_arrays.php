@@ -30,11 +30,11 @@ function elapsedDebug(\Closure $fn) {
 // $arrTable1 и $arrTable2 - массивы хеш-таблицы (объекты)
 $length = 1000000; // 1 000 000
 $arrTable1 = ['a' => 1];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arrTable1[] = $i;
 }
 $arrTable2 = ['b' => 2];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arrTable2[] = $i;
 }
 

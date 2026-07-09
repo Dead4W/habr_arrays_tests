@@ -30,7 +30,7 @@ function elapsedDebug(\Closure $fn) {
 // Создаем последовательный массив без дырок
 $length = 10000000; // 10 000 000
 $arr = [];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arr[] = $i;
 }
 

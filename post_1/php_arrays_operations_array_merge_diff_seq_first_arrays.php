@@ -31,11 +31,11 @@ function elapsedDebug(\Closure $fn) {
 // $arrTable - ассоциативный массив (hash-table)
 $length = 1000000; // 1 000 000
 $arrList = [];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arrList[] = $i;
 }
 $arrTable = ['a' => 1];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arrTable[] = $i;
 }
 

@@ -30,11 +30,11 @@ function elapsedDebug(\Closure $fn) {
 // $arrList1 и $arrList2 - последовательные массивы
 $length = 1000000; // 1 000 000
 $arrList1 = [];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arrList1[] = $i;
 }
 $arrList2 = [];
-for ($i = 0; $i <= $length; $i++) {
+for ($i = 0; $i < $length; $i++) {
     $arrList2[] = $i;
 }
 
