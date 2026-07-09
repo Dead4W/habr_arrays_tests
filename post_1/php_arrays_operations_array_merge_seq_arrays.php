@@ -27,20 +27,20 @@ function elapsedDebug(\Closure $fn) {
     );
 }
 
-// $arrSeq1 и $arrSeq2 - последовательные массивы
+// $arrList1 и $arrList2 - последовательные массивы
 $length = 1000000; // 1 000 000
-$arrSeq1 = [];
+$arrList1 = [];
 for ($i = 0; $i <= $length; $i++) {
-    $arrSeq1[] = $i;
+    $arrList1[] = $i;
 }
-$arrSeq2 = [];
+$arrList2 = [];
 for ($i = 0; $i <= $length; $i++) {
-    $arrSeq2[] = $i;
+    $arrList2[] = $i;
 }
 
 // Попробуем классику, совместить два последовательных массива
-elapsedDebug(function () use ($arrSeq1, $arrSeq2) {
-    array_merge($arrSeq1, $arrSeq2);
+elapsedDebug(function () use ($arrList1, $arrList2) {
+    array_merge($arrList1, $arrList2);
 });
 // PHP 5.6.40   | Elapsed: 96.458 ms   | Peak RAM: 460.5 MB
 // PHP 7.2.34   | Elapsed: 14.417 ms   | Peak RAM: 130.01 MB

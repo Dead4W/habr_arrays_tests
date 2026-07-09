@@ -27,12 +27,12 @@ function elapsedDebug(\Closure $fn) {
     );
 }
 
-// $arrSeq - последовательный массив (список)
+// $arrList - последовательный массив (список)
 // $arrTable - ассоциативный массив (hash-table)
 $length = 1000000; // 1 000 000
-$arrSeq = [];
+$arrList = [];
 for ($i = 0; $i <= $length; $i++) {
-    $arrSeq[] = $i;
+    $arrList[] = $i;
 }
 $arrTable = ['a' => 1];
 for ($i = 0; $i <= $length; $i++) {
@@ -40,8 +40,8 @@ for ($i = 0; $i <= $length; $i++) {
 }
 
 // Первым хеш-таблицу (array_plus: $arr1 + $arr2)
-elapsedDebug(function () use ($arrTable, $arrSeq) {
-    $arrTable + $arrSeq;
+elapsedDebug(function () use ($arrTable, $arrList) {
+    $arrTable + $arrList;
 });
 // PHP 5.6.40   | Elapsed: 48.085 ms   | Peak RAM: 368.5 MB
 // PHP 7.2.34   | Elapsed: 12.366 ms   | Peak RAM:   108 MB
